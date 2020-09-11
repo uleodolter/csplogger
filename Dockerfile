@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:3.12
 
 RUN apk add --no-cache \
 	python \
@@ -10,6 +10,7 @@ RUN apk add --no-cache \
 	gcc \
 	openssl-dev \
 	git \
+	curl \
 	&& apk del libressl-dev \
 	&& rm -rf /var/cache/apk/*
 
